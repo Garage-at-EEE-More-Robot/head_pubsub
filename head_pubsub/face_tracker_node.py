@@ -100,7 +100,7 @@ class FaceTrackerNode(Node):
         self.offset_y_publisher = self.create_publisher(Int32, 'face_offset_y', 10)
         
         # Timer for processing frames - SLOWER for stability
-        self.timer = self.create_timer(0.000001, self.process_frame)  # 10 Hz instead of 30 Hz
+        self.timer = self.create_timer(0.1, self.process_frame)  # 10 Hz instead of 30 Hz
         
         # Frame properties
         self.frame_width = 640
